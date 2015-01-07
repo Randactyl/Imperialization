@@ -62,15 +62,6 @@ function Imperialization:Initialize()
 	EVENT_MANAGER:UnregisterForEvent("Imperialization.name", EVENT_ADD_ON_LOADED, Imperialization.onAddonLoaded)
 	
 	ImperializationSettings:Initialize()
-
-	local displayName = GetDisplayName()
-	if displayName == nil or displayName == "" then
-   		if GetNumGuilds() > 0 then
-    		displayName = GetGuildMemberInfo(GetGuildId(1), GetPlayerGuildMemberIndex(GetGuildId(1)))
-   		else
-        	displayName = "@" .. GetCVar("AccountName")
-   		end
-	end
 end
 
 function Imperialization.onInventorySlotUpdate(eventCode, bagID, slotID, isNewItem, itemSoundCategory, updateReason)
@@ -92,10 +83,6 @@ function Imperialization.onInventorySlotUpdate(eventCode, bagID, slotID, isNewIt
 			end
 		end
 	end
-end
-
-function GetDisplayName()
-   return displayName
 end
 
 EVENT_MANAGER:RegisterForEvent("Imperialization.name", EVENT_ADD_ON_LOADED, Imperialization.onAddonLoaded)
