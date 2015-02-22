@@ -9,8 +9,9 @@ function Imperialization.OnAddonLoaded(event, addonName)
 
 	Imperialization.InitializeSettings()
 
-	EVENT_MANAGER:RegisterForEvent(Imperialization.name, EVENT_INVENTORY_SINGLE_SLOT_UPDATE, Imperialization.OnInventorySlotUpdate)
-	CHAT_SYSTEM:AddMessage(string.format("Imperialization loaded."))
+	EVENT_MANAGER:RegisterForEvent(Imperialization.name, EVENT_INVENTORY_SINGLE_SLOT_UPDATE, 
+		Imperialization.OnInventorySlotUpdate)
+	d("Imperialization loaded.")
 end
 
 function Imperialization.OnInventorySlotUpdate(eventCode, bagID, slotID)
@@ -26,7 +27,8 @@ function Imperialization.OnInventorySlotUpdate(eventCode, bagID, slotID)
 			local itemStyleString = GetString("SI_ITEMSTYLE", itemStyle)
 			if Imperialization.savedVariables[itemStyleString] then
 				if Imperialization.savedVariables.displayResults then
-					d(zo_strformat("<<t:1>> converted from the <<2>> style!", GetItemLink(bagID, slotID, LINK_STYLE_BRACKETS), itemStyleString))
+					d(zo_strformat("<<t:1>> converted from the <<2>> style!", GetItemLink(bagID, slotID, 
+						LINK_STYLE_BRACKETS), itemStyleString))
 				end
 				ConvertItemStyleToImperial(bagID, slotID)
 			end
