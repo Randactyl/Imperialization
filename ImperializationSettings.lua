@@ -18,6 +18,7 @@ local styleData = {
 		tooltip = "Check to convert items with no style",
 		getFunc = function() return Imperialization.savedVariables["None"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["None"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["None"]
 	},
 	[2] = {
@@ -26,6 +27,7 @@ local styleData = {
 		tooltip = "Check to convert the Altmer style",
 		getFunc = function() return Imperialization.savedVariables["Altmer"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Altmer"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Altmer"]
 	},
 	[3] = {
@@ -34,6 +36,7 @@ local styleData = {
 		tooltip = "Check to convert the Dunmer style",
 		getFunc = function() return Imperialization.savedVariables["Dunmer"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Dunmer"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Dunmer"]
 	},
 	[4] = {
@@ -42,6 +45,7 @@ local styleData = {
 		tooltip = "Check to convert the Bosmer style",
 		getFunc = function() return Imperialization.savedVariables["Bosmer"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Bosmer"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Bosmer"]
 	},
 	[5] = {
@@ -50,6 +54,7 @@ local styleData = {
 		tooltip = "Check to convert the Nord style",
 		getFunc = function() return Imperialization.savedVariables["Nord"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Nord"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Nord"]
 	},
 	[6] = {
@@ -58,6 +63,7 @@ local styleData = {
 		tooltip = "Check to convert the Breton style",
 		getFunc = function() return Imperialization.savedVariables["Breton"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Breton"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Breton"]
 	},
 	[7] = {
@@ -66,6 +72,7 @@ local styleData = {
 		tooltip = "Check to convert the Redguard style",
 		getFunc = function() return Imperialization.savedVariables["Redguard"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Redguard"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Redguard"]
 	},
 	[8] = {
@@ -74,6 +81,7 @@ local styleData = {
 		tooltip = "Check to convert the Khajiit style",
 		getFunc = function() return Imperialization.savedVariables["Khajiit"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Khajiit"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default.Khajiit
 	},
 	[9] = {
@@ -82,6 +90,7 @@ local styleData = {
 		tooltip = "Check to convert the Orc style",
 		getFunc = function() return Imperialization.savedVariables["Orc"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Orc"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Orc"]
 	},
 	[10] = {
@@ -90,6 +99,7 @@ local styleData = {
 		tooltip = "Check to convert the Argonian style",
 		getFunc = function() return Imperialization.savedVariables["Argonian"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Argonian"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Argonian"]
 	},
 	[11] = {
@@ -98,6 +108,7 @@ local styleData = {
 		tooltip = "Check to convert the Ancient Elf style",
 		getFunc = function() return Imperialization.savedVariables["Ancient Elf"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Ancient Elf"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Ancient Elf"]
 	},
 	[12] = {
@@ -106,6 +117,7 @@ local styleData = {
 		tooltip = "Check to convert the Barbaric style",
 		getFunc = function() return Imperialization.savedVariables["Barbaric"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Barbaric"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Barbaric"]
 	},
 	[13] = {
@@ -114,6 +126,7 @@ local styleData = {
 		tooltip = "Check to convert the Primal style",
 		getFunc = function() return Imperialization.savedVariables["Primal"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Primal"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Primal"]
 	},
 	[14] = {
@@ -122,6 +135,7 @@ local styleData = {
 		tooltip = "Check to convert the Daedric style",
 		getFunc = function() return Imperialization.savedVariables["Daedric"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Daedric"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Daedric"]
 	},
 	[15] = {
@@ -130,6 +144,7 @@ local styleData = {
 		tooltip = "Check to convert the Akaviri style",
 		getFunc = function() return Imperialization.savedVariables["Akaviri"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Akaviri"] = (newValue) end,
+		width = "half",
 		default = Imperialization.Default["Akaviri"]
 	},
 }
