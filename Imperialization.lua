@@ -22,11 +22,10 @@ Imperialization.Default = {
 	["None"] = false,
 	["Craglorn"] = false,
 	["Yokudan"] = false,
-	["Thieves Guild"] = false,
-	["Dark Brotherhood"] = false,
+	["Dwemer"] = false,
 
 	["displayResults"] = true,
-	["convertOnEquip"] = false
+	["convertOnEquip"] = false,
 }
 
 --[[ Unused or unavailable styles:

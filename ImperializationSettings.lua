@@ -148,24 +148,6 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Yokudan"] = (newValue) end,
 		default = Imperialization.Default["Yokudan"]
 	},
-	[18] = {
-		type = "checkbox",
-		name = "Thieves Guild",
-		tooltip = "Check to convert the Thieves Guild style - disabled until release",
-		getFunc = function() return Imperialization.savedVariables["Thieves Guild"] end,
-		setFunc = function(newValue) Imperialization.savedVariables["Thieves Guild"] = (newValue) end,
-		disabled = true,
-		default = Imperialization.Default["Thieves Guild"]
-	},
-	[19] = {
-		type = "checkbox",
-		name = "Dark Brotherhood",
-		tooltip = "Check to convert the Dark Brotherhood style - disabled until release",
-		getFunc = function() return Imperialization.savedVariables["Dark Brotherhood"] end,
-		setFunc = function(newValue) Imperialization.savedVariables["Dark Brotherhood"] = (newValue) end,
-		disabled = true,
-		default = Imperialization.Default["Dark Brotherhood"]
-	}
 }
 
 local optionsData = {
@@ -194,6 +176,8 @@ local optionsData = {
 }
 
 function ImperializationSettings:Initialize()
+
+
 	LAM2:RegisterAddonPanel("ImperializationSettings", addonPanel)
 	LAM2:RegisterOptionControls("ImperializationSettings", optionsData)
 end
