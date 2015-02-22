@@ -1,6 +1,6 @@
 ## Title: Imperialization
-## APIVersion: 100010
-## Version: 2.2.0.2
+## APIVersion: 100011
+## Version: 2.3.0.0
 ## Author: Randactyl
 ## OptionalDependsOn: LibAddonMenu-2.0
 ## SavedVariables: ImperializationVariables
