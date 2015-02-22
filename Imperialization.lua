@@ -5,15 +5,15 @@ Imperialization.version = "2.2"
 
 function Imperialization.OnAddonLoaded(event, addonName)
 	if addonName ~= Imperialization.name then return end
-	EVENT_MANAGER:UnregisterForEvent("Imperialization.name", EVENT_ADD_ON_LOADED, Imperialization.OnAddonLoaded)
+	EVENT_MANAGER:UnregisterForEvent(Imperialization.name, EVENT_ADD_ON_LOADED, Imperialization.OnAddonLoaded)
 
 	Imperialization.InitializeSettings()
 
-	EVENT_MANAGER:RegisterForEvent("Imperialization.name", EVENT_INVENTORY_SINGLE_SLOT_UPDATE, Imperialization.OnInventorySlotUpdate)
+	EVENT_MANAGER:RegisterForEvent(Imperialization.name, EVENT_INVENTORY_SINGLE_SLOT_UPDATE, Imperialization.OnInventorySlotUpdate)
 	CHAT_SYSTEM:AddMessage(string.format("Imperialization loaded."))
 end
 
-function Imperialization.OnInventorySlotUpdate(eventCode, bagID, slotID, isNewItem, itemSoundCategory, updateReason)
+function Imperialization.OnInventorySlotUpdate(eventCode, bagID, slotID)
 	local convert = nil
 	if Imperialization.savedVariables.convertOnEquip then
 		convert = BAG_WORN
@@ -34,4 +34,4 @@ function Imperialization.OnInventorySlotUpdate(eventCode, bagID, slotID, isNewIt
 	end
 end
 
-EVENT_MANAGER:RegisterForEvent("Imperialization.name", EVENT_ADD_ON_LOADED, Imperialization.OnAddonLoaded)
+EVENT_MANAGER:RegisterForEvent(Imperialization.name, EVENT_ADD_ON_LOADED, Imperialization.OnAddonLoaded)
