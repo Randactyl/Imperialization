@@ -132,22 +132,6 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["None"] = (newValue) end,
 		default = Imperialization.Default["None"]
 	},
-	[16] = {
-		type = "checkbox",
-		name = "Craglorn",
-		tooltip = "Check to convert the Craglorn style",
-		getFunc = function() return Imperialization.savedVariables["Craglorn"] end,
-		setFunc = function(newValue) Imperialization.savedVariables["Craglorn"] = (newValue) end,
-		default = Imperialization.Default["Craglorn"]
-	},
-	[17] = {
-		type = "checkbox",
-		name = "Yokudan",
-		tooltip = "Check to convert the Yokudan style",
-		getFunc = function() return Imperialization.savedVariables["Yokudan"] end,
-		setFunc = function(newValue) Imperialization.savedVariables["Yokudan"] = (newValue) end,
-		default = Imperialization.Default["Yokudan"]
-	},
 }
 
 local optionsData = {
