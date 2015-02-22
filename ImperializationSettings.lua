@@ -147,6 +147,15 @@ local styleData = {
 		width = "half",
 		default = Imperialization.Default["Akaviri"]
 	},
+	[16] = {
+		type = "checkbox",
+		name = "Dwemer",
+		tooltip = "Check to convert the Dwemer style",
+		getFunc = function() return Imperialization.savedVariables["Dwemer"] end,
+		setFunc = function(newValue) Imperialization.savedVariables["Dwemer"] = (newValue) end,
+		width = "half",
+		default = Imperialization.Default["Dwemer"]
+	},
 }
 
 local optionsData = {
