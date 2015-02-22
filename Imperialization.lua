@@ -5,6 +5,7 @@ Imperialization.version = "2.2"
 Imperialization.savedVariablesVersion = 2.3
 
 Imperialization.Default = {
+	["None"] = false,
 	["Altmer"] = false,
 	["Dunmer"] = false,
 	["Bosmer"] = false,
@@ -19,34 +20,11 @@ Imperialization.Default = {
 	["Primal"] = false,
 	["Daedric"] = false,
 	["Akaviri"] = false,
-	["None"] = false,
-	["Craglorn"] = false,
-	["Yokudan"] = false,
 	["Dwemer"] = false,
 
 	["displayResults"] = true,
 	["convertOnEquip"] = false,
 }
-
---[[ Unused or unavailable styles:
-    ["ITEMSTYLE_AREA_DWEMER"] = 14
-    ["ITEMSTYLE_AREA_IMPERIAL"] = 16
-    ["ITEMSTYLE_DEPRECATED1"] = 13
-    ["ITEMSTYLE_DEPRECATED10"] = 30
-    ["ITEMSTYLE_DEPRECATED2"] = 21
-    ["ITEMSTYLE_DEPRECATED3"] = 22
-    ["ITEMSTYLE_DEPRECATED4"] = 23
-    ["ITEMSTYLE_DEPRECATED5"] = 24
-    ["ITEMSTYLE_DEPRECATED6"] = 25
-    ["ITEMSTYLE_DEPRECATED7"] = 26
-    ["ITEMSTYLE_DEPRECATED8"] = 28
-    ["ITEMSTYLE_DEPRECATED9"] = 29
-    ["ITEMSTYLE_ENEMY_BANDIT"] = 18
-    ["ITEMSTYLE_ENEMY_DRAUGR"] = 31
-    ["ITEMSTYLE_ENEMY_MAORMER"] = 32
-    ["ITEMSTYLE_RACIAL_IMPERIAL"] = 34
-    ["ITEMSTYLE_UNIQUE"] = 10
-]]
 
 function Imperialization.onAddonLoaded(event, addonName)
 	if addonName ~= Imperialization.name then return end
