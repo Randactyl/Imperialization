@@ -14,13 +14,21 @@ local addonPanel = {
 local styleData = {
 	[1] = {
 		type = "checkbox",
+		name = "None",
+		tooltip = "Check to convert items with no style",
+		getFunc = function() return Imperialization.savedVariables["None"] end,
+		setFunc = function(newValue) Imperialization.savedVariables["None"] = (newValue) end,
+		default = Imperialization.Default["None"]
+	},
+	[2] = {
+		type = "checkbox",
 		name = "Altmer",
 		tooltip = "Check to convert the Altmer style",
 		getFunc = function() return Imperialization.savedVariables["Altmer"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Altmer"] = (newValue) end,
 		default = Imperialization.Default["Altmer"]
 	},
-	[2] = {
+	[3] = {
 		type = "checkbox",
 		name = "Dunmer",
 		tooltip = "Check to convert the Dunmer style",
@@ -28,7 +36,7 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Dunmer"] = (newValue) end,
 		default = Imperialization.Default["Dunmer"]
 	},
-	[3] = {
+	[4] = {
 		type = "checkbox",
 		name = "Bosmer",
 		tooltip = "Check to convert the Bosmer style",
@@ -36,7 +44,7 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Bosmer"] = (newValue) end,
 		default = Imperialization.Default["Bosmer"]
 	},
-	[4] = {
+	[5] = {
 		type = "checkbox",
 		name = "Nord",
 		tooltip = "Check to convert the Nord style",
@@ -44,7 +52,7 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Nord"] = (newValue) end,
 		default = Imperialization.Default["Nord"]
 	},
-	[5] = {
+	[6] = {
 		type = "checkbox",
 		name = "Breton",
 		tooltip = "Check to convert the Breton style",
@@ -52,7 +60,7 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Breton"] = (newValue) end,
 		default = Imperialization.Default["Breton"]
 	},
-	[6] = {
+	[7] = {
 		type = "checkbox",
 		name = "Redguard",
 		tooltip = "Check to convert the Redguard style",
@@ -60,7 +68,7 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Redguard"] = (newValue) end,
 		default = Imperialization.Default["Redguard"]
 	},
-	[7] = {
+	[8] = {
 		type = "checkbox",
 		name = "Khajiit",
 		tooltip = "Check to convert the Khajiit style",
@@ -68,7 +76,7 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Khajiit"] = (newValue) end,
 		default = Imperialization.Default.Khajiit
 	},
-	[8] = {
+	[9] = {
 		type = "checkbox",
 		name = "Orc",
 		tooltip = "Check to convert the Orc style",
@@ -76,7 +84,7 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Orc"] = (newValue) end,
 		default = Imperialization.Default["Orc"]
 	},
-	[9] = {
+	[10] = {
 		type = "checkbox",
 		name = "Argonian",
 		tooltip = "Check to convert the Argonian style",
@@ -84,7 +92,7 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Argonian"] = (newValue) end,
 		default = Imperialization.Default["Argonian"]
 	},
-	[10] = {
+	[11] = {
 		type = "checkbox",
 		name = "Ancient Elf",
 		tooltip = "Check to convert the Ancient Elf style",
@@ -92,7 +100,7 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Ancient Elf"] = (newValue) end,
 		default = Imperialization.Default["Ancient Elf"]
 	},
-	[11] = {
+	[12] = {
 		type = "checkbox",
 		name = "Barbaric",
 		tooltip = "Check to convert the Barbaric style",
@@ -100,7 +108,7 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Barbaric"] = (newValue) end,
 		default = Imperialization.Default["Barbaric"]
 	},
-	[12] = {
+	[13] = {
 		type = "checkbox",
 		name = "Primal",
 		tooltip = "Check to convert the Primal style",
@@ -108,7 +116,7 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Primal"] = (newValue) end,
 		default = Imperialization.Default["Primal"]
 	},
-	[13] = {
+	[14] = {
 		type = "checkbox",
 		name = "Daedric",
 		tooltip = "Check to convert the Daedric style",
@@ -116,21 +124,13 @@ local styleData = {
 		setFunc = function(newValue) Imperialization.savedVariables["Daedric"] = (newValue) end,
 		default = Imperialization.Default["Daedric"]
 	},
-	[14] = {
+	[15] = {
 		type = "checkbox",
 		name = "Akaviri",
 		tooltip = "Check to convert the Akaviri style",
 		getFunc = function() return Imperialization.savedVariables["Akaviri"] end,
 		setFunc = function(newValue) Imperialization.savedVariables["Akaviri"] = (newValue) end,
 		default = Imperialization.Default["Akaviri"]
-	},
-	[15] = {
-		type = "checkbox",
-		name = "None",
-		tooltip = "Check to convert items with no style",
-		getFunc = function() return Imperialization.savedVariables["None"] end,
-		setFunc = function(newValue) Imperialization.savedVariables["None"] = (newValue) end,
-		default = Imperialization.Default["None"]
 	},
 }
 
