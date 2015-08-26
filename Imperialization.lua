@@ -1,7 +1,7 @@
 Imperialization = {}
 
 Imperialization.name = "Imperialization"
-Imperialization.version = "2.3.0.0"
+Imperialization.version = "2.4.0.0"
 
 function Imperialization.OnAddonLoaded(event, addonName)
 	if addonName ~= Imperialization.name then return end
