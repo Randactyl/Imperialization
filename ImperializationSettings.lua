@@ -1,6 +1,6 @@
 ImperializationSettings = ZO_Object:Subclass()
 
-local addonVersion = "2.4.0.0"
+local addonVersion = "2.5.0.0"
 local savedVariablesVersion = 2.4
 local settings = nil
 local defaults = {
