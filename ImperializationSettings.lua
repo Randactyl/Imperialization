@@ -1,8 +1,14 @@
 ImperializationSettings = ZO_Object:Subclass()
 
 local addonVersion = "2.4.0.0"
-local savedVariablesVersion = 2.3
+local savedVariablesVersion = 2.4
 local settings = nil
+local defaults = {
+	styles = {},
+
+	["displayResults"] = true,
+	["convertOnEquip"] = false,
+}
 
 function ImperializationSettings:New()
 	local obj = ZO_Object.New(self)
@@ -11,44 +17,6 @@ function ImperializationSettings:New()
 end
 
 function ImperializationSettings:Initialize()
-	local defaults = {
-		styles = {
-			["None"] = false,
-			["Breton"] = false,
-			["Redguard"] = false,
-			["Orc"] = false,
-			["Dark Elf"] = false,
-			["Nord"] = false,
-			["Argonian"] = false,
-			["High Elf"] = false,
-			["Wood Elf"] = false,
-			["Khajiit"] = false,
-			["Unique"] = false,
-			["Thieves Guild"] = false,
-			["Dark Brotherhood"] = false,
-			["Dwemer"] = false,
-			["Ancient Elf"] = false,
-			["Imperial (Area)"] = false,
-			["Barbaric"] = false,
-			["Bandit"] = false,
-			["Primal"] = false,
-			["Daedric"] = false,
-			["Undaunted"] = false,
-			["Craglorn"] = false,
-			["Glass"] = false,
-			["Xivkyn"] = false,
-			["Soul Shriven"] = false,
-			["Draugr"] = false,
-			["Maormer"] = false,
-			["Akaviri"] = false,
-			["Imperial (Racial)"] = false,
-			["Yokudan"] = false,
-			["Universal"] = false,
-		},
-
-		["displayResults"] = true,
-		["convertOnEquip"] = false,
-	}
 
 	settings = ZO_SavedVars:New("ImperializationVariables",
 		savedVariablesVersion, nil, defaults)
@@ -90,7 +58,7 @@ function ImperializationSettings:CreateSettingsMenu()
 			tooltip = "Displays an item link in the chat window for converted items",
 			getFunc = function() return settings.displayResults end,
 			setFunc = function(newValue) settings.displayResults = (newValue) end,
-			default = settings.displayResults
+			default = defaults.displayResults,
 		},
 		[3] = {
 			type = "checkbox",
@@ -98,8 +66,8 @@ function ImperializationSettings:CreateSettingsMenu()
 			tooltip = "Convert an item on equip rather that on receipt",
 			getFunc = function() return settings.convertOnEquip end,
 			setFunc = function(newValue) settings.convertOnEquip = (newValue) end,
-			default = settings.convertOnEquip
-		}
+			default = defaults.convertOnEquip
+		},
 	}
 
 	LAM:RegisterAddonPanel("ImperializationSettings", addonPanel)
