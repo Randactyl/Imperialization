@@ -6,7 +6,7 @@ Imperialization converts all eligible, new gear entering your inventory to the I
 
 Conversions do not happen by default. You must set which styles you want to convert from the options menu.
 
-*NOTE*: Not all gear is convertible. The Imperial Edition of the game for this addon to work.
+*NOTE*: Not all gear is convertible. The Imperial Edition of the game is required for this addon to work.
 
 *WARNING*: Once converted, items are bound to your account. Once bound, an item cannot be transferred to another player.
 
