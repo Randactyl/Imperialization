@@ -10,6 +10,33 @@ local defaults = {
 	["convertOnEquip"] = false,
 }
 
+local function getStyles()
+	styles = {}
+
+	i = 0
+	itemStyleString = GetString("SI_ITEMSTYLE", i)
+	while(itemStyleString ~= "") do
+		d(itemStyleString)
+		styles[itemStyleString] = false
+
+		i = i + 1
+		--there are holes in the set of item style strings, skip them
+		if i == 30 or i == 36 then
+			i = i + 1
+		end
+
+		--get next style
+		itemStyleString = GetString("SI_ITEMSTYLE", i)
+
+		--if we hit the unused styles, stop
+		if itemStyleString == "Unused 0" then
+			itemStyleString = ""
+		end
+	end
+
+	return styles
+end
+
 function ImperializationSettings:New()
 	local obj = ZO_Object.New(self)
 	obj:Initialize()
@@ -17,6 +44,7 @@ function ImperializationSettings:New()
 end
 
 function ImperializationSettings:Initialize()
+	defaults.styles = getStyles()
 
 	settings = ZO_SavedVars:New("ImperializationVariables",
 		savedVariablesVersion, nil, defaults)
