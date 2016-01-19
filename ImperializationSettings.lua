@@ -37,6 +37,39 @@ local function getStyles()
 	return styles
 end
 
+local function createStyleControlData()
+	local styleData = {}
+	local function pairsByKeys(t)
+		local a = {}
+		for n in pairs(t) do table.insert(a, n) end
+		table.sort(a)
+		local i = 0
+		local iter = function()
+			i = i + 1
+			if a[i] == nil then return nil
+			else return a[i], t[a[i]]
+			end
+		end
+		return iter
+	end
+
+	for style, value in pairsByKeys(defaults.styles) do
+		local temp = {
+			type = "checkbox",
+			name = style,
+			tooltip = "Check to convert the " .. style .. " style",
+			getFunc = function() return settings.styles[style] end,
+			setFunc = function(newValue) settings.styles[style] = (newValue) end,
+			width = "half",
+			default = defaults.styles[style],
+		}
+
+		table.insert(styleData, temp)
+	end
+
+	return styleData
+end
+
 function ImperializationSettings:New()
 	local obj = ZO_Object.New(self)
 	obj:Initialize()
@@ -61,24 +94,14 @@ function ImperializationSettings:CreateSettingsMenu()
 		version = addonVersion,
 		slashCommand = "/imp",
 		registerForRefresh = true,
-		registerForDefaults = true
-	}
-	local styleData = {
-		--[[[2] = {
-			type = "checkbox",
-			name = "Breton",
-			tooltip = "Check to convert the Breton style",
-			getFunc = function() return settings.styles["Breton"] end,
-			setFunc = function(newValue) settings.styles["Breton"] = (newValue) end,
-			width = "half",
-		},]]
+		registerForDefaults = true,
 	}
 	local optionsData = {
 		[1] = {
 			type = "submenu",
 			name = "Styles",
 			tooltip = "Choose styles to convert",
-			controls = styleData
+			controls = createStyleControlData(),
 		},
 		[2] = {
 			type = "checkbox",
