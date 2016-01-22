@@ -16,7 +16,6 @@ local function getStyles()
 	i = 0
 	itemStyleString = GetString("SI_ITEMSTYLE", i)
 	while(itemStyleString ~= "") do
-		d(itemStyleString)
 		styles[itemStyleString] = false
 
 		i = i + 1
